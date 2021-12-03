@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <title>Frontend Mentor | Interactive pricing component</title>
 
-  Pageviews
-  $ /month
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="background"></div>
+      <article class="textbox">
+      <h1 class="header">Simple, traffic-based pricing</h1>
+      <span class="header-description"
+        >Sign-up for our 30-day trial. No credit card required.</span>
+    </article>
+      <div class="sub-box">
+        <div class="pricing">
+          <span class="pricing-quantity">10k pageviews</span>
+          <div>
+          <h3 class="pricing-amount">$16.00 </h3>
+          <span>/month</span>
+        </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              step="25"
+              value="0"
+              class="input-range"
+              id="myRange"
+            />
+          </div>
+        </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+        <div class="discount-switch">
+        <div class="toggle">
+          <span>Monthly billing</span>
+          <label class="switch">
+            <input type="checkbox" class="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span>yearly billing</span>
+        </div>
+        <span class="discount-indicator">25% discount</span>
+      </div>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="cta">
+          <ul class="cta-features">
+            <li><img src="./images/check.png" alt=""> Unlimited websites</li>
+            <li><img src="./images/check.png" alt=""> 100% data ownership</li>
+            <li> <img src="./images/check.png" alt=""> Email reports</li>
+          </ul>
+          <button class="cta-button">Start my trial</button>
+        </div>
+      </div>
+    </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
